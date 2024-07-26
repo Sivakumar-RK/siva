@@ -1,17 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 
     <title>Sample MERN</title>
+    <style>
+        @keyframes color{
+            from{
+                color: rgb(219, 47, 20);
+            }
+            30%{
+                color: rgb(184, 230, 18);
+            }
+            65%{
+                color: rgb(29, 217, 48);
+            }
+            100%{
+                color: rgb(20, 193, 236);
+            }
+        }
+        @keyframes color2{
+            from{
+                color: rgb(159, 0, 114);
+            }
+            30%{
+                color: rgb(119, 197, 9);
+            }
+            65%{
+                color: rgb(195, 102, 10);
+            }
+            100%{
+                color: rgb(17, 184, 33);
+            }
+        }
+
+        .ab{
+            animation: color 1s infinite;
+        }
+        .cd{
+            animation: color2 1s infinite;
+        }
+    </style>
     
 </head>
 <body style="background-image: url(https://moewalls.com/wp-content/uploads/2024/07/luffy-gear-5-lightning-god-one-piece-thumb.jpg) ;  color: #0b070787" >
     <header>
-        <h1>Learning MERN From Rampex Technologies</h1>
-        <h2>Creating our portfolio</h2>
+        <h1 class="ab" style="text-align: center;">Learning MERN From Rampex Technologies</h1>
+        <h2 class="cd">Creating our portfolio</h2>
     </header>
     <section>
-        <h3>Abbreviation of MERN:</h3>
+        <h3 class="cd">Abbreviation of MERN:</h3>
         <ul>
             <li>M - MongoDB</li>
             <li>E - ExpressJS</li>
@@ -21,13 +58,13 @@
     </section>
     <section >
         <h4>Type 200 Words in 2 Sec?</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet hendrerit egestas. Sed sed est est. Sed commodo tempus tortor eget consequat. Nulla facilisi. Vivamus sodales dictum felis, a volutpat lectus eleifend vel. Quisque quis sodales tellus. Aenean porta vestibulum est, venenatis fringilla mauris volutpat sed. Sed ultrices velit eros, vel imperdiet turpis lacinia nec. Duis porttitor tincidunt pharetra. Proin sed cursus mi, vel imperdiet metus. Nunc eleifend pellentesque leo, ac aliquet elit finibus vitae. Donec molestie nisl vel eros tristique, non vulputate ipsum tristique. Aliquam vestibulum, risus in tempor condimentum, orci nisl efficitur libero, non posuere lacus leo non ante. Nulla facilisi. Cras interdum vulputate nisi vitae tempor.
-            Aenean laoreet non ligula fermentum feugiat. Praesent dignissim iaculis dolor, in aliquam augue condimentum at. Donec semper ut lorem ac vulputate. Vestibulum quis diam non metus luctus consequat sed ut lorem. Aenean ut elementum metus. Suspendisse ipsum tortor, efficitur ut sem ut, dapibus elementum orci. Nulla facilisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <p style="color: solid black;"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet hendrerit egestas. Sed sed est est. Sed commodo tempus tortor eget consequat. Nulla facilisi. Vivamus sodales dictum felis, a volutpat lectus eleifend vel. Quisque quis sodales tellus. Aenean porta vestibulum est, venenatis fringilla mauris volutpat sed. Sed ultrices velit eros, vel imperdiet turpis lacinia nec. Duis porttitor tincidunt pharetra. Proin sed cursus mi, vel imperdiet metus. Nunc eleifend pellentesque leo, ac aliquet elit finibus vitae. Donec molestie nisl vel eros tristique, non vulputate ipsum tristique. Aliquam vestibulum, risus in tempor condimentum, orci nisl efficitur libero, non posuere lacus leo non ante. Nulla facilisi. Cras interdum vulputate nisi vitae tempor.
+            Aenean laoreet non ligula fermentum feugiat. Praesent dignissim iaculis dolor, in aliquam augue condimentum at. Donec semper ut lorem ac vulputate. Vestibulum quis diam non metus luctus consequat sed ut lorem. Aenean ut elementum metus. Suspendisse ipsum tortor, efficitur ut sem ut, dapibus elementum orci. Nulla facilisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</b></p>
     </section>
     <section>
-        <h4>How to make an image a hyperlink?</h4>
-        <p>Answer:</p>
-        <a href="https://onepiece.fandom.com/wiki/Monkey_D._Luffy">
+        <h4 class="ab">How to make an image a hyperlink?</h4>
+        <p><b>Answer:</b></p>
+        <a href="https://www.google.com/search?q=luffy+wikipedia&oq=luff&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIOCAAQRRg7GEMYgAQYigUyBggBEEUYOzIGCAIQRRg5MgoIAxAuGLEDGIAEMg8IBBAAGEMYsQMYgAQYigUyCggFEAAYsQMYgAQyCggGEAAYsQMYgAQyDAgHEAAYQxiABBiKBTIMCAgQABhDGIAEGIoFMhIICRAuGEMYgwEYsQMYgAQYigXSAQgzMTg2ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOgiopuw3lzzxMxKxqfXhfiv8Yo4WNRGvhCA&s" alt="https://groww.in/stocks">
     </a>
     </section>
