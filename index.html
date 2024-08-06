@@ -1,86 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" style="background-image: url(https://i.pinimg.com/originals/62/39/4d/62394d753859943e6a1a36443ef78795.gif)">
 <head>
-
-    <title>Sample MERN</title>
-    <style>
-        @keyframes color{
-            from{
-                color: rgb(219, 47, 20);
-            }
-            30%{
-                color: rgb(184, 230, 18);
-            }
-            65%{
-                color: rgb(29, 217, 48);
-            }
-            100%{
-                color: rgb(20, 193, 236);
-            }
-        }
-        @keyframes color2{
-            from{
-                color: rgb(159, 0, 114);
-            }
-            30%{
-                color: rgb(119, 197, 9);
-            }
-            65%{
-                color: rgb(195, 102, 10);
-            }
-            100%{
-                color: rgb(17, 184, 33);
-            }
-        }
-
-        .ab{
-            animation: color 1s infinite;
-        }
-        .cd{
-            animation: color2 1s infinite;
-        }
-    </style>
-    
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
 </head>
-<body style="background-image: url(https://moewalls.com/wp-content/uploads/2024/07/luffy-gear-5-lightning-god-one-piece-thumb.jpg) ;  color: #0b070787" >
-    <header>
-        <h1 class="ab" style="text-align: center;">Learning MERN From Rampex Technologies</h1>
-        <h2 class="cd">Creating our portfolio</h2>
-    </header>
-    <section>
-        <h3 class="cd">Abbreviation of MERN:</h3>
-        <ul>
-            <li>M - MongoDB</li>
-            <li>E - ExpressJS</li>
-            <li>R - ReactJS</li>
-            <li>N - NodeJS</li>
-        </ul>
-    </section>
-    <section >
-        <h4>Type 200 Words in 2 Sec?</h4>
-        <p style="color: solid black;"><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet hendrerit egestas. Sed sed est est. Sed commodo tempus tortor eget consequat. Nulla facilisi. Vivamus sodales dictum felis, a volutpat lectus eleifend vel. Quisque quis sodales tellus. Aenean porta vestibulum est, venenatis fringilla mauris volutpat sed. Sed ultrices velit eros, vel imperdiet turpis lacinia nec. Duis porttitor tincidunt pharetra. Proin sed cursus mi, vel imperdiet metus. Nunc eleifend pellentesque leo, ac aliquet elit finibus vitae. Donec molestie nisl vel eros tristique, non vulputate ipsum tristique. Aliquam vestibulum, risus in tempor condimentum, orci nisl efficitur libero, non posuere lacus leo non ante. Nulla facilisi. Cras interdum vulputate nisi vitae tempor.
-            Aenean laoreet non ligula fermentum feugiat. Praesent dignissim iaculis dolor, in aliquam augue condimentum at. Donec semper ut lorem ac vulputate. Vestibulum quis diam non metus luctus consequat sed ut lorem. Aenean ut elementum metus. Suspendisse ipsum tortor, efficitur ut sem ut, dapibus elementum orci. Nulla facilisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</b></p>
-    </section>
-    <section>
-        <h4 class="ab">How to make an image a hyperlink?</h4>
-        <p><b>Answer:</b></p>
-        <a href="https://www.google.com/search?q=luffy+wikipedia&oq=luff&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIOCAAQRRg7GEMYgAQYigUyBggBEEUYOzIGCAIQRRg5MgoIAxAuGLEDGIAEMg8IBBAAGEMYsQMYgAQYigUyCggFEAAYsQMYgAQyCggGEAAYsQMYgAQyDAgHEAAYQxiABBiKBTIMCAgQABhDGIAEGIoFMhIICRAuGEMYgwEYsQMYgAQYigXSAQgzMTg2ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOgiopuw3lzzxMxKxqfXhfiv8Yo4WNRGvhCA&s" alt="https://groww.in/stocks">
-    </a>
-    </section>
-    <section>
-        <h3>Git Commands</h3>
-        <ul>
-            <li>git init</li>
-            <li>git add</li>
-            <li>git status</li>
-            <li>git diff</li>
-            <li>git commit</li>
-            <li>git branch</li>
-            <li>git remote</li>
-            <li>git push</li>
-            <li>git log</li>
-        </ul>
-    </section>
+<body>
+    <br>
+    <br><br>
+    <div class="box">
+        <div class="pomodoro-timer" >
+            <div class="phases">
+                <button id="work" class="colorDiv" style="background-color: #FF10F0;">Work</button>
+                <button id="shortBreak" style="background-color: #4D4DFF;">Short Break</button>
+                <button id="longBreak" style="background-color: #4D4DFF;">Long Break</button>
+            </div>
+            <br>
+            <br>
+            <h1 style="animation: cs 6s infinite;">POMODORO TIMER</h1>
+            <div class="timer">
+                <span id="minutes" style="font-size: 3em;">25</span>:<span id="seconds">00</span>
+            </div><br>
+            <div class="controls">
+                <button id="start" style="background-color: green;">Start</button>
+                <button id="stop" style="background-color: rgb(226, 14, 14);">Stop</button>
+                <button id="reset" style="background-color: gray;">Reset</button>
+            </div>
+        </div>
+    </div><br>
+    <br><br>
+
+
+ <center> <h2 style="color:wheat ;">Tasks</h2></center>
+    <div class="notes-section">
+        <input type="text" id="taskInput" placeholder=" Enter your task here" style="border: 0;">
+        <button id="addTask" style="background-color: rgb(109, 109, 227); border-radius: 24px; padding: 15px; font-size: 1em; cursor: pointer; border: 0;">Add Task</button>
+       
+            <!-- Tasks will be displayed here -->
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
