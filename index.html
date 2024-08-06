@@ -12,6 +12,125 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <style>
+        body {
+    font-family: "Poppins", sans-serif;
+}
+
+.box {
+    text-align: center;
+    /* margin-top: 50px; */
+}
+
+.pomodoro-timer {
+    display: inline-block;
+    padding: 20px;
+    background: rgba(255, 255, 255);
+    border-radius: 10px;
+
+}
+html{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: bg 5s infinite;
+}
+.timer{
+    font-size:xx-large;
+}
+
+.phases button {
+    margin: 5px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.notes-section {
+    text-align: center;
+    margin-top: 20px;
+    text-align: center;
+   display:flex;
+   justify-content: center;
+}
+
+#taskInput {
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+    background-color: #f9f9f9;
+    border-radius: 24px;
+}
+
+.notes-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    padding: 10px ;
+    
+}
+
+.note {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    
+    
+}
+@keyframes cs{
+    20%{
+        color:#1f1fec;
+    }
+    40%{
+        color:#FF10F0;
+    }
+    80%{
+        color:#1313ec;
+    }
+    100%{
+        color:#FF10F0;
+    }
+}
+
+
+@keyframes bg{
+    10%{
+        background-color:#FF10F0;
+    }
+
+
+    20%{
+        background-color:#1f1fec;
+    }
+    60%{
+        background-color:#FF10F0;
+    }
+    80%{
+        background-color: #1313ec;
+    }
+    100%{
+        background-color:#FF10F0;
+    }
+}
+
+
+
+    </style>
 </head>
 <body>
     <br>
@@ -47,6 +166,115 @@
             <!-- Tasks will be displayed here -->
     </div>
 
-    <script src="script.js"></script>
+    <script>let timer;
+        let minutes;
+        let seconds = 0;
+        let isRunning = false;
+        
+        const displayMinutes = document.getElementById('minutes');
+        const displaySeconds = document.getElementById('seconds');
+        const startButton = document.getElementById('start');
+        const stopButton = document.getElementById('stop');
+        const resetButton = document.getElementById('reset');
+        const workButton = document.getElementById('work');
+        const shortBreakButton = document.getElementById('shortBreak');
+        const longBreakButton = document.getElementById('longBreak');
+        
+        const workDuration = 25;
+        const shortBreakDuration = 5;
+        const longBreakDuration = 15;
+        
+        let currentPhase = 'work';
+        
+        function updateDisplay() {
+            displayMinutes.textContent = String(minutes).padStart(2, '0');
+            displaySeconds.textContent = String(seconds).padStart(2, '0');
+        }
+        
+        function startTimer() {
+            if (!isRunning) {
+                isRunning = true;
+                timer = setInterval(() => {
+                    if (seconds === 0) {
+                        if (minutes === 0) {
+                            clearInterval(timer);
+                            alert(`${capitalizeFirstLetter(currentPhase)} time is up!`);
+                            isRunning = false;
+                            return;
+                        }
+                        minutes--;
+                        seconds = 59;
+                    } else {
+                        seconds--;
+                    }
+                    updateDisplay();
+                }, 1000);
+            }
+        }
+        
+        function stopTimer() {
+            clearInterval(timer);
+            isRunning = false;
+        }
+        
+        function resetTimer() {
+            clearInterval(timer);
+            isRunning = false;
+            if (currentPhase === 'work') {
+                minutes = workDuration;
+            } else if (currentPhase === 'shortBreak') {
+                minutes = shortBreakDuration;
+            } else if (currentPhase === 'longBreak') {
+                minutes = longBreakDuration;
+            }
+            seconds = 0;
+            updateDisplay();
+        }
+        
+        function setPhase(phase) {
+            currentPhase = phase;
+            resetTimer();
+        }
+        
+        // function capitalizeFirstLetter(string) {
+        //     return string.charAt(0).toUpperCase() + string.slice(1);
+        // }
+        
+        startButton.addEventListener('click', startTimer);
+        stopButton.addEventListener('click', stopTimer);
+        resetButton.addEventListener('click', resetTimer);
+        workButton.addEventListener('click', () => setPhase('work'));
+        shortBreakButton.addEventListener('click', () => setPhase('shortBreak'));
+        longBreakButton.addEventListener('click', () => setPhase('longBreak'));
+        
+        setPhase('work');
+        document.getElementById('addTask').addEventListener('click', function() {
+            const taskInput = document.getElementById('taskInput');
+            const taskText = taskInput.value.trim();
+        
+            if (taskText !== '') {
+                const notesRow = document.getElementById('notesRow');
+                const noteDiv = document.createElement('div');
+                noteDiv.className = 'note';
+                noteDiv.textContent = taskText;
+        
+                notesRow.appendChild(noteDiv);
+                taskInput.value = '';  // Clear the input field
+            }
+        });
+        
+        // Your existing timer script code here
+        
+        
+        // document.getElementById('work').onclick = function() {
+        //     style.backgroundColor = 'lightgreen';
+        // };
+        // document.getElementById('longBreak').onclick = function() {
+        //     style.backgroundColor = 'lightblue';
+        // };
+        // document.getElementById('shortBreak').onclick = function() {
+        //     style.backgroundColor = 'lightpink';
+        // };
+        </script>
 </body>
 </html>

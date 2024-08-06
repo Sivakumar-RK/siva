@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <style>
+        /* *{
+            background-color: aqua;
+        } */
+        html{
+            scroll-behavior:smooth;
+        }
+        body{
+            margin:0px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .flex1{
+            display: flex;
+            background-color:purple ;
+            flex-direction: row;
+            justify-content: space-around;
+            color: rgb(249, 255, 240);
+            padding: .5rem;
+            position: fixed;
+            width:100%;
+            top:0px;
+            /* z-index:1000;  */
+        }
+        .flex2{
+            display: flex;
+            background-color:rgb(0, 0, 0) ;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 150px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+        .flex3{
+            
+            background-color:rgb(0, 0, 0);
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 100px;
+            
+        }
+        .flex4{
+            padding: 50px;
+            background-color: rgb(0, 0, 0);
+            padding-left: 100px;
+
+        }
+        
+        .flex5{
+            display: flex;
+            background-color:rgb(0, 0, 0);
+            flex-direction: row;
+            justify-content:initial;
+            padding: 20px;
+            
+        }
+        .flex6{
+            
+            background-color:rgb(0, 0, 0) ;
+            /* flex-direction: row;
+            justify-content: space-between; */
+            padding: 80px;
+            
+        }
+        .item{
+            font-size: 20px;
+        }
+        ul{
+            display:flex;
+            list-style: none;
+            text-decoration: none;
+            
+        }
+        li{
+            padding-left: 40px;
+            background-color:purple;
+        }
+        li:hover{
+            background-color:gray ;
+            padding: 10px;
+        }
+        a{
+            
+            text-decoration: none;
+            color: white;
+
+        }
+        ol{
+            
+            text-decoration: none;
+            background-color:purple ;
+        }
+        .ran{
+            padding-right: 25px;
+            padding-bottom: 7px;
+            list-style: none;
+            background-color:rgb(0, 0, 0) ;
+            color: white;
+        }
+        .vt{
+            padding-left: 40px;
+        }
+        
+       table,th{
+            padding: 30px;
+            padding-bottom: 20px;
+            border: 3px solid white;
+            color: rgb(255, 255, 255);
+        }
+        .ranj{
+            padding: 90px; 
+            padding-left: 150px; 
+            color: aliceblue;
+            font-size: 20px; 
+        }
+        p{
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div  id="home" class="flex1">
+        
+        <h1>BALAJI K.D</h1>
+        <ul>
+            <li class="item"><a href="#about"> HOME</a></li>
+            <li class="item"><a  href="#about">About</a></li>
+            <li class="item"><a href="#education">  Education</a></li>
+            <li class="item"><a href="#skills"> Skills</a></li>
+            <li class="item"><a href="#Training">Training</a></li>
+            <li class="item"><a href="#contact"> Contact</a></li>
+            <li class="item"><a href="White Simple Student CV Resume (3).pdf" target="_blank" > RESUME</a></li>
+           
+        </ul>
+    </div>
+    
+    <div id="about" class="flex2">
+        <img src=" balaji.jpeg"  height="300px" width="300px" style=" border-radius: 50%; border: 8px solid rgb(0, 0, 0)">
+        <!-- <h1 style="padding-bottom: 100px;">ABOUT ME </h1> -->
+        <p class="ranj" >Hello! I am BALAJI K , a dedicated third-year student specializing in Electronics and Communication Engineering (ECE) at Sri Krishna College of Engineering and Technology (SKCET). My academic journey has been marked by a profound interest in the principles and applications of electronics and communication systems.</p>
+    </div> 
+    <div id="education" class="flex3">
+        <h1 style="color:rgb(0, 255, 94);">EDUCATION</h1>
+        <table style="padding-left: 50px;">
+            <tr>
+                <th>ACADEMIC</th>
+                <th>INSTUTION</th>
+                <th>YEAR & BATCH</th>
+                <th>PERCENTAGE</th>
+            </tr>
+            <tr>
+                <td>10TH</td>
+                <td>VIVEK VIDYALAYA MATRIC HR SEC SCHOOL</td>
+                <td>2020</td>
+                <td>80%</td>
+            </tr>
+            <tr>
+                <td>DIPLOMA</td>
+                <td>PSG POLYTECHNIC COLLAGE</td>
+                <td>2022</td>
+                <td>90%</td>
+            </tr>
+            <tr>
+                <td>II-YEAR</td>
+                <td>SKCET</td>
+                <td>2023</td>
+                <td>74%</td>
+            </tr>
+            <tr>
+                <td>II-YEAR</td>
+                <td>SKCET</td>
+                <td>2024</td>
+                <td>78%</td>
+            </tr>
+            
+        </table>
+      </div>
+    <div class="flex6" id="skills">
+        <h1 style="color: rgb(60, 255, 0);">SKILLS</h1>
+        <h2>Software Skills</h2>
+        <div>
+            <p class="ran" >C++</p>
+            <p class="ran" >Java</p>
+            <p class="ran">Html</p>
+        </div>
+        <hr>
+        <h2>Personals Skills</h2>
+        <div>
+            <p class="ran">Fast Learner</p>
+            <p class="ran">Ability to Multitask</p>
+            <p class="ran">Fast learner</p>
+        </div>
+    </div>
+    <div class="flex4" id="Training" >
+        <h2 style="color: rgb(21, 255, 0);">TRAINING</h2>
+        <br>
+        <h3 style="color: aliceblue;">Internship at EMGLITZ</h3>
+        <p class="vt" >Position: Intern</p>
+        <p class="vt">Duration: 21days</p>
+        <p class="vt">Course: Embedded Systems.</p>
+        <hr>
+        
+    </div>
+    <div id="contact" class="flex5">
+        <a>contact-me +91-9345533775</a>
+        <a><img src="img\gmail.png" height="25px" width="30"> bk934538@gmail.com</a>
+
+    </div>
+    
+    
+</nav>
+</body>
+</html>

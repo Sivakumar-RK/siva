@@ -1,0 +1,116 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.box {
+    text-align: center;
+    /* margin-top: 50px; */
+}
+
+.pomodoro-timer {
+    display: inline-block;
+    padding: 20px;
+    background: rgba(255, 255, 255);
+    border-radius: 10px;
+
+}
+html{
+    background-size: 100%;
+    background-repeat: no-repeat;
+    animation: bg 5s infinite;
+}
+.timer{
+    font-size:xx-large;
+}
+
+.phases button {
+    margin: 5px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.notes-section {
+    text-align: center;
+    margin-top: 20px;
+    text-align: center;
+   display:flex;
+   justify-content: center;
+}
+
+#taskInput {
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+    background-color: #f9f9f9;
+    border-radius: 24px;
+}
+
+.notes-row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    padding: 10px ;
+    
+}
+
+.note {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    
+    
+}
+@keyframes cs{
+    20%{
+        color:#1f1fec;
+    }
+    40%{
+        color:#FF10F0;
+    }
+    80%{
+        color:#1313ec;
+    }
+    100%{
+        color:#FF10F0;
+    }
+}
+
+
+@keyframes bg{
+    10%{
+        background-color:#FF10F0;
+    }
+
+
+    20%{
+        background-color:#1f1fec;
+    }
+    60%{
+        background-color:#FF10F0;
+    }
+    80%{
+        background-color: #1313ec;
+    }
+    100%{
+        background-color:#FF10F0;
+    }
+}
+
+
